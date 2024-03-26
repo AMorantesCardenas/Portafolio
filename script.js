@@ -2,20 +2,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.querySelector('body');
     const modeToggle = document.getElementById('dark-mode-toggle');
     const modeIcon = document.getElementById('mode-icon');
-    const svgImageMain = document.getElementById('svgImageMain'); // Agregamos referencia al SVG del main
+    const svgImageMain = document.getElementById('svgImageMain'); // Referencia al SVG del main
     let isAnimating = false; // Variable de control para verificar si hay una animación en curso
+
+    // Guardar las rutas de las imágenes de los SVG en modo claro y oscuro
+    const lightModeSVG = 'Logos/FullSV.svg';
+    const darkModeSVG = 'Logos/FullSVW.svg';
 
     // Al hacer clic en el botón de cambio de modo, cambia el modo y guarda la preferencia en el almacenamiento local
     modeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
 
-        // Cambia el SVG del modo oscuro si está activado
+        // Cambia el SVG dependiendo del modo
         if (body.classList.contains('dark-mode')) {
             modeIcon.src = 'Logos/noche.svg'; // Ruta del icono de modo oscuro
-            svgImageMain.src = 'Logos/FullSVW.svg'; // Ruta del SVG de modo oscuro
+            svgImageMain.src = darkModeSVG; // Establece la imagen del SVG en modo oscuro
         } else {
             modeIcon.src = 'Logos/dia.svg'; // Ruta del icono de modo claro
-            svgImageMain.src = 'Logos/FullSv.svg'; // Ruta del SVG de modo claro
+            svgImageMain.src = lightModeSVG; // Establece la imagen del SVG en modo claro
         }
 
         // Guarda la preferencia del modo en el almacenamiento local
@@ -30,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Cambia el SVG al modo oscuro si está activado
         modeIcon.src = 'Logos/noche.svg';
-        svgImageMain.src = 'Logos/FullSVW.svg'; // Cambia al SVG oscuro
+        svgImageMain.src = darkModeSVG; // Establece la imagen del SVG en modo oscuro
     }
+
 
     // Manejar el clic en el enlace "Inicio" para hacer scroll suave hacia arriba
     const inicioLink = document.querySelector('nav a[href="#inicio"]');
