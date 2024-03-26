@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modeToggle = document.getElementById('dark-mode-toggle');
     const modeIcon = document.getElementById('mode-icon');
     const svgImageMain = document.getElementById('svgImageMain'); // Referencia al SVG del main
+    const redesLinks = document.querySelectorAll('#redes img'); // Obtener todas las imágenes de los enlaces de redes sociales
     let isAnimating = false; // Variable de control para verificar si hay una animación en curso
 
     // Guardar las rutas de las imágenes de los SVG en modo claro y oscuro
@@ -17,9 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (body.classList.contains('dark-mode')) {
             modeIcon.src = 'Logos/noche.svg'; // Ruta del icono de modo oscuro
             svgImageMain.src = darkModeSVG; // Establece la imagen del SVG en modo oscuro
+
+            // Cambiar las imágenes de las flechas en modo nocturno
+            redesLinks.forEach(link => {
+                link.src = 'Logos/flechanoche.svg';
+            });
         } else {
             modeIcon.src = 'Logos/dia.svg'; // Ruta del icono de modo claro
             svgImageMain.src = lightModeSVG; // Establece la imagen del SVG en modo claro
+
+            // Cambiar las imágenes de las flechas en modo claro
+            redesLinks.forEach(link => {
+                link.src = 'Logos/flecha.svg';
+            });
         }
 
         // Guarda la preferencia del modo en el almacenamiento local
@@ -35,6 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Cambia el SVG al modo oscuro si está activado
         modeIcon.src = 'Logos/noche.svg';
         svgImageMain.src = darkModeSVG; // Establece la imagen del SVG en modo oscuro
+
+        // Cambiar las imágenes de las flechas en modo nocturno
+        redesLinks.forEach(link => {
+            link.src = 'Logos/flechanoche.svg';
+        });
     }
 
 
