@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Cambia el SVG del modo oscuro si está activado
         if (body.classList.contains('dark-mode')) {
-            modeIcon.src = 'Contenido/noche.svg';
-            svgImageMain.src = 'Contenido/FullSvW.svg'; // Cambia al SVG oscuro
+            modeIcon.src = 'Logos/noche.svg'; // Ruta del icono de modo oscuro
+            svgImageMain.src = 'Logos/FullSVW.svg'; // Ruta del SVG de modo oscuro
         } else {
-            modeIcon.src = 'Contenido/dia.svg';
-            svgImageMain.src = 'Contenido/FullSv.svg'; // Cambia al SVG claro
+            modeIcon.src = 'Logos/dia.svg'; // Ruta del icono de modo claro
+            svgImageMain.src = 'Logos/FullSv.svg'; // Ruta del SVG de modo claro
         }
 
         // Guarda la preferencia del modo en el almacenamiento local
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.add('dark-mode');
 
         // Cambia el SVG al modo oscuro si está activado
-        modeIcon.src = 'Contenido/noche.svg';
-        svgImageMain.src = 'Contenido/FullSvW.svg'; // Cambia al SVG oscuro
+        modeIcon.src = 'Logos/noche.svg';
+        svgImageMain.src = 'Logos/FullSVW.svg'; // Cambia al SVG oscuro
     }
 
     // Manejar el clic en el enlace "Inicio" para hacer scroll suave hacia arriba
@@ -103,4 +103,3 @@ document.addEventListener('DOMContentLoaded', function() {
         animateScroll();
     }
 });
-z
