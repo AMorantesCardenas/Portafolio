@@ -12,9 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Establecer el ancho del carrusel
+    carousel.style.width = `${carousel.scrollWidth}px`;
+
     let position = 0;
     let speed = 1; // Velocidad de desplazamiento
     let observer;
+    let animationFrameId;
 
     // Iniciar el movimiento del carrusel
     startCarousel();
@@ -23,6 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
     function startCarousel() {
         moveCarousel();
         observeLogos();
+        
+        // Escuchar eventos de visibilidad de la página
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+    }
+
+    // Función para detener el movimiento del carrusel cuando la página no está visible
+    function handleVisibilityChange() {
+        if (document.hidden) {
+            cancelAnimationFrame(animationFrameId);
+        } else {
+            moveCarousel();
+        }
     }
 
     // Función para mover el carrusel
@@ -30,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         position -= speed;
         carousel.style.transform = `translateX(${position}px)`;
 
-        requestAnimationFrame(moveCarousel);
+        animationFrameId = requestAnimationFrame(moveCarousel);
     }
 
     // Función para observar los logos y moverlos al final del carrusel cuando salen del área visible

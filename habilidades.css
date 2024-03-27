@@ -5,16 +5,14 @@
 
 .carousel-container {
     width: 100%;
-    overflow: hidden;
+
 }
 
 .carousel {
     display: flex;
-    animation: slide 10s linear infinite; /* Duración de 10 segundos, lineal y bucle infinito */
+    
 }
 
-/* CSS */
-/* CSS */
 .logo {
     margin-right: 200px;
     position: relative;
