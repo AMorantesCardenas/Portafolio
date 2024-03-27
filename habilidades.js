@@ -41,11 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     entry.target.parentNode.appendChild(entry.target);
                 }
             });
-        }, { root: carousel });
+        }, { root: null, threshold: 0.5 }); // Cambiado root a null y threshold ajustado
 
         logos.forEach(logo => {
             observer.observe(logo);
         });
     }
 });
-

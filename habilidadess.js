@@ -41,18 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     entry.target.parentNode.appendChild(entry.target);
                 }
             });
-        }, { root: carousel });
+        }, { root: null, threshold: 0.5 }); // Cambiado root a null y threshold ajustado
 
         logos.forEach(logo => {
             observer.observe(logo);
         });
     }
-
-    // Agregar evento hover a cada imagen del carrusel
-    logos.forEach(logo => {
-        logo.addEventListener('mouseover', function() {
-            const level = this.getAttribute('data-level'); // Obtener el nivel de habilidad del atributo data-level
-            alert('Nivel de habilidad: ' + level); // Mostrar nivel de habilidad al pasar el mouse sobre la imagen
-        });
-    });
 });
