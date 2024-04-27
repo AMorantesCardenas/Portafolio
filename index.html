@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortF d Alex</title>
     <link rel="icon" type="image/svg+xml" href="Logos/logoMain200p.svg">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="sobremi.css">
@@ -12,72 +13,96 @@
     <link rel="stylesheet" href="habilidades.css">
     <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="proyectos.css">
+    <link rel="stylesheet" href="inicio.css">
     
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-    </style>
-    <style>
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        /* Estilos personalizados para el contenido del menú colapsable */
+        .menu-content {
+            padding: 20px;
+            background-color: #343a40; /* Color de fondo */
+            color: #ffffff; /* Color del texto */
+        }
     </style>
 </head>
 <body>
     <header class="prohead">
         <div class="container">
-            <!-- Logo en el centro -->
-
-    
             <!-- Menú a la izquierda -->
-            <nav class="navv navv-left" id="menu-mobile">
+            <nav class="navv navv-left d-none d-md-block">
                 <ul class="menu" id="menu-left">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#sobreMi">Sobre Mí</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
                 </ul>
             </nav>
-            <div class="logo-center">
+    
+            <!-- Logo en el centro -->
+            <div class="logo-container">
                 <a href="#" id="logoNav"><img src="Logos/logoMain200pB.svg" alt="Logo"></a>
-            </div>    
+            </div>
+    
             <!-- Menú a la derecha -->
-            <nav class="navv navv-right" id="menu-mobile">
+            <nav class="navv navv-right d-none d-md-block">
                 <ul class="menu" id="menu-right">
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#actividades">Actividades</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="dropdown-btn" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>           
-        </div>
-    </header>
-     
-    
-    
 
+            <!-- Botón de hamburguesas -->
+            <div class="pos-f-t d-md-none">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <!-- Contenido del menú colapsable -->
+                    <div class="menu-content">
+                        <h4>Menú</h4>
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#sobreMi">Sobre Mí</a></li>
+                            <li><a href="#proyectos">Proyectos</a></li>
+                            <li><a href="#habilidades">Habilidades</a></li>
+                            <li><a href="#actividades">Actividades</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark bg-dark">
+                    <!-- Botón de hamburguesa -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>  
+    
     <main>
         <div id="dark-mode-toggle" class="dark-mode-toggle">
             <img id="mode-icon" src="Logos/dia.svg" alt="Modo Claro">
         </div>
 
-            <section id="inicio">
-        
-                <div class="inicioF" >
-                    <div class="content">
+        <section id="inicio">
+            <div class="inicioF" >
+                <div class="content">
                     <div class="svg-container">
-                    <!-- SVG que cambiará según el modo -->
-                    <img id="svgImageMain" src="Logos/FullSV.svg" alt="SVG">
-                    </div>
+                        <!-- SVG que cambiará según el modo -->
+                        <img id="svgImageMain" src="Logos/FullSV.svg" alt="SVG">
                     </div>
                 </div>
-                <div id="redes">
-                    <a href="https://www.instagram.com/alex.whut/" target="_blank" class="social-link">INSTAGRAM<img src="Logos/flecha.svg" alt="Instagram"></a>
-                    <a href="https://wa.link/a9ihpj" target="_blank" class="social-link">WHATSAPP<img src="Logos/flecha.svg" alt="wa"></a>
-                    <a href="https://twitter.com/oWhut_" target="_blank" class="social-link">TWITTER<img src="Logos/flecha.svg" alt="Twitter"></a>
-                </div>
-            </section>
-            <div class="main-content">
+            </div>
+            <div id="redes">
+                <a href="https://www.instagram.com/alex.whut/" target="_blank" class="social-link">INSTAGRAM<img src="Logos/flecha.svg" alt="Instagram"></a>
+                <a href="https://wa.link/a9ihpj" target="_blank" class="social-link">WHATSAPP<img src="Logos/flecha.svg" alt="wa"></a>
+                <a href="https://twitter.com/oWhut_" target="_blank" class="social-link">TWITTER<img src="Logos/flecha.svg" alt="Twitter"></a>
+            </div>
+        </section>
+
+        <div class="main-content">
             <section id="sobreMi" class="sobre-mi-section">
                 <div class="sobre-mi-content">
                     <div class="sobre-mi-image">
@@ -93,7 +118,6 @@
                     </div>
                 </div>
             </section>
-    
             <section id="proyectos">
                 <h2>Proyectos</h2>
                 <p>protectos que voy realizando.</p>
@@ -114,28 +138,23 @@
                     <!-- Agrega más proyectos de la misma manera -->
                 </div>
             </section>
-            
-    
+
             <section id="habilidades">
                 <h2>Habilidades</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam tenetur velit labore aspernatur adipisci, iure quisquam dicta quod laborum, atque molestias voluptas nobis. Rerum architecto deserunt deleniti, enim consectetur praesentium!</p>
                 <div class="carousel-container">
-                  <div class="carousel">
-                    <div class="logo" data-level="Junior"><img src="Imgs/html.png" alt="HTML"></div>
-                    <div class="logo" data-level="Junior"><img src="Imgs/css.png" alt="CSS"></div>
-                    <div class="logo" data-level="Junior"><img src="Imgs/js.png" alt="JavaScript"></div>
-                    <div class="logo" data-level="Junior"><img src="Imgs/react.png" alt="React"></div>
-                    <div class="logo" data-level="Senior"><img src="Imgs/ps.png" alt="Adobe Photoshop"></div>
-                    <div class="logo" data-level="Senior"><img src="Imgs/ai.png" alt="Adobe Illustrator"></div>
-                    <div class="logo" data-level="Semi-senior"><img src="Imgs/pr.png" alt="Adobe Premier"></div>
-                  </div>
+                    <div class="carousel">
+                        <div class="logo" data-level="Junior"><img src="Imgs/html.png" alt="HTML"></div>
+                        <div class="logo" data-level="Junior"><img src="Imgs/css.png" alt="CSS"></div>
+                        <div class="logo" data-level="Junior"><img src="Imgs/js.png" alt="JavaScript"></div>
+                        <div class="logo" data-level="Junior"><img src="Imgs/react.png" alt="React"></div>
+                        <div class="logo" data-level="Senior"><img src="Imgs/ps.png" alt="Adobe Photoshop"></div>
+                        <div class="logo" data-level="Senior"><img src="Imgs/ai.png" alt="Adobe Illustrator"></div>
+                        <div class="logo" data-level="Semi-senior"><img src="Imgs/pr.png" alt="Adobe Premier"></div>
+                    </div>
                 </div>
-            
-                
-                </div>                
-                <!-- Contenido de la sección "Habilidades" -->
             </section>
-    
+
             <section id="actividades">
                 <h2>Actividades</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, dignissimos unde! Molestiae eaque laudantium fugit dicta commodi nostrum fugiat voluptatum recusandae obcaecati, vel iste autem accusamus ullam. Dolorum, delectus quibusdam.</p>
@@ -164,19 +183,21 @@
                     <button type="submit">Enviar</button>
                 </form>
             </section>
-            
         </div>
-
-        
     </main>
-    
 
     <footer>
-
+        <!-- Contenido del pie de página -->
     </footer>
 
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Tu script personalizado -->
     <script src="script.js"></script>
     <script src="habilidades.js"></script>
-
+    <script src="celular.js"></script>
 </body>
 </html>

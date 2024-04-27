@@ -1,59 +1,32 @@
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Estilos para el modo celular */
 
-    .logo-center {
-        margin-bottom: 20px; /* Espacio entre el logo y el menú */
-    }
 
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /* Agrega tus estilos para el menú de hamburguesas aquí */
     .navv-left,
     .navv-right {
-        display: none;
+        display: none; /* Oculta los menús de navegación */
     }
 
-    /* Estilos para el botón desplegable */
+    .logo-container {
+        order: 1; /* Mueve el logo hacia la izquierda */
+    }
+
     .dropdown-btn {
-        display: block;
-        text-align: center;
-        cursor: pointer;
-        padding: 10px;
+        order: 2; /* Mueve el botón de hamburguesas al centro */
     }
 
-    .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #333;
-        margin: 5px auto;
+    .menu.active {
+        display: block; /* Muestra el menú de hamburguesas cuando está activo */
     }
 
-    /* Mostrar el menú cuando está abierto */
-    #menu.open {
+    .mobile-menu.active {
+        /* Estilos para mostrar el menú en modo celular */
         display: block;
     }
 
-    /* Ajuste para la sección "Sobre Mí" en dispositivos móviles */
-    #sobreMi {
-        padding: 0; /* Elimina el padding en modo celular */
-    }
-
-    .sobre-mi-content {
-        padding: 0; /* Elimina el padding en modo celular */
-    }
-
-    /* Estilos para la sección "Sobre Mí" en dispositivos móviles */
-    #sobreMi .sobre-mi-text h2 {
-        font-size: 12px; /* Tamaño de fuente más pequeño para dispositivos móviles */
-    }
-
-    #sobreMi .sobre-mi-text p {
-        font-size: 8px; /* Tamaño de fuente más pequeño para dispositivos móviles */
-    }
-
-    #inicio{
-        padding-top: 10%;
-    }
 }

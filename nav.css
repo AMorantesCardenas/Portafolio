@@ -1,0 +1,61 @@
+
+.prohead {
+    background-color: #f0f2f5;
+    padding: 10px 20px; /* Añade padding a los lados del header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Asegura que el navbar esté por encima de otros elementos */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Agrega una sombra de 2px de desplazamiento vertical y 4px de desplazamiento horizontal, con opacidad 0.1 */
+}
+
+
+.container {
+    display: flex;
+    justify-content: center; /* Alinea los elementos a ambos lados del contenedor */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.logo-container img {
+    width: 75px;
+    height: auto;
+}
+
+.navv {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px; /* Ajusta el espacio entre los elementos del nav */
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black; /* Color de texto predeterminado */
+    padding: 12px 10px; /* Ajusta el relleno según sea necesario */
+    border-radius: 50px; /* Redondea las esquinas */
+}
+
+
+
