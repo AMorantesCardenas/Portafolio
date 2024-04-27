@@ -2,49 +2,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
     const logos = carousel.querySelectorAll('.logo');
     const totalLogos = logos.length;
-    const cloneCount = Math.ceil(window.innerWidth / logos[0].offsetWidth) + 1;
-
-    // Clonar logos para llenar el carrusel
+    const containerWidth = carousel.offsetWidth;
+    const logoWidth = logos[0].offsetWidth;
+    const cloneCount = Math.ceil(containerWidth / logoWidth);
+  
     for (let i = 0; i < cloneCount; i++) {
-        logos.forEach(logo => {
+        for (let j = 0; j < totalLogos; j++) {
+            const logo = logos[j];
             const clone = logo.cloneNode(true);
             carousel.appendChild(clone);
-        });
+        }
     }
-
+  
     let position = 0;
-    let speed = 1; // Velocidad de desplazamiento
-    let observer;
-
-    // Iniciar el movimiento del carrusel
+    let speed = 1;
+  
     startCarousel();
-
-    // Función para iniciar el movimiento del carrusel
+  
     function startCarousel() {
         moveCarousel();
-        observeLogos();
     }
-
-    // Función para mover el carrusel
+  
     function moveCarousel() {
         position -= speed;
         carousel.style.transform = `translateX(${position}px)`;
-
         requestAnimationFrame(moveCarousel);
     }
-
-    // Función para observar los logos y moverlos al final del carrusel cuando salen del área visible
-    function observeLogos() {
-        observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    entry.target.parentNode.appendChild(entry.target);
-                }
-            });
-        }, { root: null, threshold: 0.5 }); // Cambiado root a null y threshold ajustado
-
-        logos.forEach(logo => {
-            observer.observe(logo);
-        });
-    }
+  
+    carousel.addEventListener('mousedown', function(event) {
+        if (event.button === 0) {
+            event.preventDefault();
+        }
+    });
 });
+
+// Captura el evento de la rueda del ratón
+window.addEventListener('wheel', function(event) {
+    // Verifica si el evento de la rueda del ratón se desplaza hacia la derecha
+    if (event.deltaX > 0) {
+        // Si se desplaza hacia la derecha, evita el comportamiento predeterminado del evento
+        event.preventDefault();
+    }
+}, { passive: false }); // Asegúrate de que el evento no sea pasivo para que pueda prevenirse

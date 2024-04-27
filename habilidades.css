@@ -3,38 +3,51 @@
     padding: 0;
 }
 
+
 .carousel-container {
     width: 100%;
-
+    overflow-x: hidden;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .carousel {
     display: flex;
-    
 }
 
 .logo {
-    margin-right: 200px;
+    margin-right: 100px;
+    margin-left: 100px;
     position: relative;
+    justify-content: center;
+}
+
+.logo {
+    position: relative; /* Asegúrate de que el elemento .logo tenga una posición relativa */
 }
 
 .logo::after {
-    content: attr(data-level); /* El contenido del pseudoelemento será el valor del atributo 'data-level' */
-    position: absolute; /* Posiciona el pseudoelemento de forma absoluta */
-    top: 50%; /* Lo sitúa verticalmente en el centro */
-    left: 50%; /* Lo sitúa horizontalmente en el centro */
-    transform: translate(-50%, -50%); /* Lo centra completamente */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-    color: white; /* Color del texto */
-    padding: 5px 10px; /* Espaciado interno */
-    border-radius: 5px; /* Borde redondeado */
-    font-size: 12px; /* Tamaño de fuente */
-    visibility: hidden; /* Inicialmente oculto */
-    opacity: 0; /* Inicialmente transparente */
-    transition: opacity 0.3s, visibility 0.3s; /* Transición suave */
+    content: attr(data-level);
+    position: absolute;
+    top: 50%; /* Centra el texto verticalmente en la mitad del logo */
+    left: 50%; /* Centra el texto horizontalmente en el logo */
+    transform: translate(-50%, -50%); /* Centra tanto vertical como horizontalmente */
+    width: 50%; /* Ocupa el 50% del ancho del logo */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    display: flex; /* Usa flexbox para centrar el texto horizontalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .logo:hover::after {
-    visibility: visible; /* Muestra el pseudoelemento al pasar el mouse sobre el contenedor */
-    opacity: 1; /* Hace el pseudoelemento completamente visible */
+    visibility: visible;
+    opacity: 1;
 }

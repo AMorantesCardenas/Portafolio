@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: black; /* Color de texto predeterminado */
+    background-color: #f0f2f5;
 }
 
 /* Estilos de la barra de desplazamiento específicos de WebKit */
@@ -34,7 +35,7 @@ body.dark-mode {
 }
 
 .prohead {
-    background-color: #ffffff;
+    background-color: #f0f2f5;
     padding: 10px 20px; /* Añade padding a los lados del header */
     position: fixed;
     top: 0;

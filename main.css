@@ -1,7 +1,8 @@
 /* Estilos para el contenido dentro del main */
 .main-content {
     text-align: center; /* Centra el texto dentro del contenedor */
-    padding: 20px; /* Ajusta el espaciado entre las secciones */
+    padding: 0; /* Ajusta el espaciado entre las secciones */
+    
 }
 
 .main-content section {
@@ -81,7 +82,7 @@
 }
 
 .back-to-top {
-    color: #fff;
+    color: #f0f2f5;
     text-decoration: none;
 }
 
