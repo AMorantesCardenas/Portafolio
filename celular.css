@@ -52,4 +52,8 @@
     #sobreMi .sobre-mi-text p {
         font-size: 8px; /* Tamaño de fuente más pequeño para dispositivos móviles */
     }
+
+    #inicio{
+        padding-top: 10%;
+    }
 }

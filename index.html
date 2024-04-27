@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="sobremi.css">
     <link rel="stylesheet" href="celular.css">
     <link rel="stylesheet" href="habilidades.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="proyectos.css">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
     </style>
@@ -57,21 +60,24 @@
         <div id="dark-mode-toggle" class="dark-mode-toggle">
             <img id="mode-icon" src="Logos/dia.svg" alt="Modo Claro">
         </div>
+
+            <section id="inicio">
         
-        <div class="inicioF" id="Inicio">
-            <div class="content">
-                <div class="svg-container">
+                <div class="inicioF" >
+                    <div class="content">
+                    <div class="svg-container">
                     <!-- SVG que cambiará según el modo -->
                     <img id="svgImageMain" src="Logos/FullSV.svg" alt="SVG">
+                    </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div id="redes">
-            <a href="https://www.instagram.com/alex.whut/" target="_blank" class="social-link">INSTAGRAM<img src="Logos/flecha.svg" alt="Instagram"></a>
-            <a href="https://wa.link/a9ihpj" target="_blank" class="social-link">WHATSAPP<img src="Logos/flecha.svg" alt="wa"></a>
-            <a href="https://twitter.com/oWhut_" target="_blank" class="social-link">TWITTER<img src="Logos/flecha.svg" alt="Twitter"></a>
-        </div>
-        <div class="main-content">
+                <div id="redes">
+                    <a href="https://www.instagram.com/alex.whut/" target="_blank" class="social-link">INSTAGRAM<img src="Logos/flecha.svg" alt="Instagram"></a>
+                    <a href="https://wa.link/a9ihpj" target="_blank" class="social-link">WHATSAPP<img src="Logos/flecha.svg" alt="wa"></a>
+                    <a href="https://twitter.com/oWhut_" target="_blank" class="social-link">TWITTER<img src="Logos/flecha.svg" alt="Twitter"></a>
+                </div>
+            </section>
+            <div class="main-content">
             <section id="sobreMi" class="sobre-mi-section">
                 <div class="sobre-mi-content">
                     <div class="sobre-mi-image">
@@ -90,9 +96,25 @@
     
             <section id="proyectos">
                 <h2>Proyectos</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, adipisci perspiciatis recusandae aliquid nulla ratione dicta placeat tenetur voluptates ea pariatur. Sapiente dicta cumque atque minima blanditiis, enim laudantium quasi.</p>
-                <!-- Contenido de la sección "Proyectos" -->
+                <p>protectos que voy realizando.</p>
+                <div class="proyectos-container">
+                    <!-- Aquí se agregarán los proyectos -->
+                    <div class="proyecto">
+                        <a href="link_proyecto_1" target="_blank">
+                            <img src="Imgs/proyecto01.jpg" alt="Proyecto 1">
+                            <p>Actividad 01 Henry</p>
+                        </a>
+                    </div>
+                    <div class="proyecto">
+                        <a href="link_proyecto_2" target="_blank">
+                            <img src="Imgs/proyecto02.jpg" alt="Proyecto 2">
+                            <p>calculadora</p>
+                        </a>
+                    </div>
+                    <!-- Agrega más proyectos de la misma manera -->
+                </div>
             </section>
+            
     
             <section id="habilidades">
                 <h2>Habilidades</h2>
@@ -119,12 +141,30 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, dignissimos unde! Molestiae eaque laudantium fugit dicta commodi nostrum fugiat voluptatum recusandae obcaecati, vel iste autem accusamus ullam. Dolorum, delectus quibusdam.</p>
                 <!-- Contenido de la sección "Educación" -->
             </section>
-    
             <section id="contacto">
-                <h2>Contácto</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus accusantium dolore aut inventore asperiores ad iste deserunt id laborum vero. Temporibus amet dolore quos nihil eum tempora, id dolorum. Quia.</p>
-                <!-- Contenido de la sección "Contacto" -->
+                <h2>Formulario de Contacto</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi sit blanditiis vel fuga ut assumenda fugit nesciunt quaerat, ab natus! Repellendus officiis natus, aspernatur aliquid eos inventore molestias molestiae nisi!</p>
+                <form id="formulario-contacto" method="POST" action="enviar_formulario.php">
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="celular">Celular:</label>
+                        <input type="tel" id="celular" name="celular" required>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
             </section>
+            
         </div>
 
         
