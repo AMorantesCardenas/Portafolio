@@ -7,12 +7,6 @@ body {
 }
 
 
-
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Tamaño de fuente más pequeño para dispositivos móviles */
-    }
-}
 body.dark-mode {
     color: white; /* Cambia el color del texto en modo oscuro */
     background-color: #222; /* Cambia el color de fondo en modo oscuro */

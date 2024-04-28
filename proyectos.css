@@ -3,6 +3,7 @@
     background-color: #f9f9f9;
     max-width: 100%;
     padding-top: 50px;
+    
 }
 
 .proyectos-container {
@@ -10,12 +11,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
+    padding-left: 18%;
+    padding-right: 18%;
 }
 
 .proyecto {
-    width: calc(20% - 40px); /* 20% de ancho y 40px de espacio entre proyectos */
-    margin-bottom: 60px;
+    width: calc(20% - 20px); /* 20% de ancho y 20px de margen entre proyectos */
+    margin-bottom: 60px; /* Mantener el margen inferior */
+    margin-left: 20px; /* Agregar margen izquierdo */
+    margin-right: 20px; /* Agregar margen derecho */
 }
+
 
 .proyecto a {
     display: block;
@@ -40,7 +46,6 @@
 .proyecto:hover img {
     opacity: 0.8; /* Reducir la opacidad al pasar el ratón sobre la imagen */
 }
-
 
 .dark-mode #proyectos {
     background-color: #333; /* Color de fondo en modo oscuro */
