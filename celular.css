@@ -1,11 +1,6 @@
 /* Estilos para el modo celular */
 
-
-
-
-
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     /* Agrega tus estilos para el menú de hamburguesas aquí */
     .navv-left,
     .navv-right {

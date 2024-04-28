@@ -51,6 +51,7 @@
     margin: 0 10px; /* Espaciado entre enlaces */
     display: flex;
     align-items: center;
+    padding-right: 100px;
 }
 
 /* Estilos para enlaces en modo noche */

@@ -2,3 +2,11 @@ body {
     font-family: 'Poppins', sans-serif !important;
     font-weight: 400; /* Establecer el peso de la fuente */
 }
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 400; /* Establecer el peso de la fuente */
+        font-size: 10px;
+    }
+}
