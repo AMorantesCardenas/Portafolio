@@ -1,6 +1,7 @@
 #proyectos {
     padding: 20px;
     background-color: #f9f9f9;
+    max-width: 100%;
 }
 
 .proyectos-container {
@@ -12,7 +13,7 @@
 
 .proyecto {
     width: calc(20% - 40px); /* 20% de ancho y 40px de espacio entre proyectos */
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .proyecto a {
@@ -27,7 +28,7 @@
     height: 200px; /* Alto fijo */
     object-fit: cover; /* Ajustar la imagen manteniendo la relación de aspecto */
     margin-bottom: 10px;
-    border-radius: 8px; /* Añadir bordes redondeados */
+    border-radius: 40px; /* Añadir bordes redondeados */
 }
 
 .proyecto p {
@@ -50,3 +51,8 @@
 }
 
 
+@media (max-width: 768px) {
+    .proyecto {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+    }
+}
