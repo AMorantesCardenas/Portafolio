@@ -52,8 +52,8 @@
     padding: 12px 10px;
     border-radius: 10px;
     display: inline-block;
-    outline: none; /* Elimina la línea de selección */
-    cursor: pointer; /* Cambia el cursor al pasar sobre los enlaces */
+    outline: none;
+    cursor: pointer;
 }
 
 .menu li:hover a {

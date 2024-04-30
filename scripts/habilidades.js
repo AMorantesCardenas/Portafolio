@@ -17,11 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let position = 0;
     let speed = 1;
   
-    startCarousel();
+    
   
     function startCarousel() {
         moveCarousel();
     }
+
+    startCarousel();
   
     function moveCarousel() {
         position -= speed;
@@ -34,13 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
         }
     });
+
+
 });
 
-// Captura el evento de la rueda del ratón
+
 window.addEventListener('wheel', function(event) {
-    // Verifica si el evento de la rueda del ratón se desplaza hacia la derecha
+   
     if (event.deltaX > 0) {
-        // Si se desplaza hacia la derecha, evita el comportamiento predeterminado del evento
+        
         event.preventDefault();
     }
-}, { passive: false }); // Asegúrate de que el evento no sea pasivo para que pueda prevenirse
+}, { passive: false }); 

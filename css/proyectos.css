@@ -3,6 +3,7 @@
     background-color: #f9f9f9;
     max-width: 100%;
     padding-top: 50px;
+    padding-bottom: 50px;
     
 }
 
@@ -16,10 +17,10 @@
 }
 
 .proyecto {
-    width: calc(20% - 20px); /* 20% de ancho y 20px de margen entre proyectos */
-    margin-bottom: 60px; /* Mantener el margen inferior */
-    margin-left: 20px; /* Agregar margen izquierdo */
-    margin-right: 20px; /* Agregar margen derecho */
+    width: calc(20% - 20px); 
+    
+    margin-left: 20px; 
+    margin-right: 20px; 
 }
 
 
@@ -31,11 +32,11 @@
 }
 
 .proyecto img {
-    width: 200px; /* Ancho fijo */
-    height: 200px; /* Alto fijo */
-    object-fit: cover; /* Ajustar la imagen manteniendo la relación de aspecto */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
     margin-bottom: 10px;
-    border-radius: 40px; /* Añadir bordes redondeados */
+    border-radius: 40px;
 }
 
 .proyecto p {
@@ -44,21 +45,21 @@
 }
 
 .proyecto:hover img {
-    opacity: 0.8; /* Reducir la opacidad al pasar el ratón sobre la imagen */
+    opacity: 0.8;
 }
 
 .dark-mode #proyectos {
-    background-color: #333; /* Color de fondo en modo oscuro */
-    color: #fff; /* Color de texto en modo oscuro */
+    background-color: #333;
+    color: #fff; 
 }
 
 .dark-mode .proyecto a {
-    color: #fff; /* Color de texto en modo oscuro */
+    color: #fff; 
 }
 
 
 @media (max-width: 768px) {
     .proyecto {
-        width: 100%; /* Ancho completo en dispositivos móviles */
+        width: 100%; 
     }
 }

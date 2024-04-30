@@ -2,80 +2,80 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.querySelector('body');
     const modeToggle = document.getElementById('dark-mode-toggle');
     const modeIcon = document.getElementById('mode-icon');
-    const svgImageMain = document.getElementById('svgImageMain'); // Referencia al SVG del main
-    const redesLinks = document.querySelectorAll('#redes img'); // Obtener todas las imágenes de los enlaces de redes sociales
-    let isAnimating = false; // Variable de control para verificar si hay una animación en curso
+    const svgImageMain = document.getElementById('svgImageMain');
+    const redesLinks = document.querySelectorAll('#redes img'); 
+    let isAnimating = false; 
 
-    // Guardar las rutas de las imágenes de los SVG en modo claro y oscuro
+    
     const lightModeSVG = 'Logos/FullSV.svg';
     const darkModeSVG = 'Logos/FullSVW.svg';
 
-    // Al hacer clic en el botón de cambio de modo, cambia el modo y guarda la preferencia en el almacenamiento local
+
     modeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
 
         // Cambia el SVG dependiendo del modo
         if (body.classList.contains('dark-mode')) {
-            modeIcon.src = 'Logos/noche.svg'; // Ruta del icono de modo oscuro
-            svgImageMain.src = darkModeSVG; // Establece la imagen del SVG en modo oscuro
+            modeIcon.src = 'Logos/noche.svg'; 
+            svgImageMain.src = darkModeSVG; 
 
-            // Cambiar las imágenes de las flechas en modo nocturno
+          
             redesLinks.forEach(link => {
                 link.src = 'Logos/flechanoche.svg';
             });
         } else {
-            modeIcon.src = 'Logos/dia.svg'; // Ruta del icono de modo claro
-            svgImageMain.src = lightModeSVG; // Establece la imagen del SVG en modo claro
+            modeIcon.src = 'Logos/dia.svg'; 
+            svgImageMain.src = lightModeSVG;
 
-            // Cambiar las imágenes de las flechas en modo claro
+            
             redesLinks.forEach(link => {
                 link.src = 'Logos/flecha.svg';
             });
         }
 
-        // Guarda la preferencia del modo en el almacenamiento local
+       
         const isDarkMode = body.classList.contains('dark-mode');
         localStorage.setItem('dark-mode', isDarkMode);
     });
 
-    // Verifica si el usuario ya ha establecido una preferencia de modo y aplica ese modo si es así
+    
     const isDarkMode = localStorage.getItem('dark-mode') === 'true';
     if (isDarkMode) {
         body.classList.add('dark-mode');
 
-        // Cambia el SVG al modo oscuro si está activado
+       
         modeIcon.src = 'Logos/noche.svg';
-        svgImageMain.src = darkModeSVG; // Establece la imagen del SVG en modo oscuro
+        svgImageMain.src = darkModeSVG;
 
-        // Cambiar las imágenes de las flechas en modo nocturno
+       
         redesLinks.forEach(link => {
             link.src = 'Logos/flechanoche.svg';
         });
     }
 
 
-    // Manejar el clic en el enlace "Inicio" para hacer scroll suave hacia arriba
+  
     const inicioLink = document.querySelector('nav a[href="#inicio"]');
     if (inicioLink) {
         inicioLink.addEventListener('click', function(event) {
             event.preventDefault();
-            if (!isAnimating) { // Verificar si no hay animaciones en curso
+            if (!isAnimating) {
                 const targetPosition = 0;
                 smoothScrollTo(targetPosition, 1000);
             }
         });
     }
 
-    // Obtener altura del encabezado
+   
     const headerHeight = document.querySelector('header').offsetHeight;
     const conocenosTitle = document.getElementById('conocenoss');
 
-    // Manejar el clic en los enlaces de navegación
+    
     const links = document.querySelectorAll('nav a');
     links.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
-            if (!isAnimating) { // Verificar si no hay animaciones en curso
+            if (!isAnimating) { 
                 const href = this.getAttribute('href');
 
                 if (href === '#inicio') {
@@ -89,15 +89,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     smoothScrollTo(targetPosition, 1000);
                 }
 
-                // Agregar margen superior al título "Conócenos" después del desplazamiento
-                conocenosTitle.style.marginTop = `${headerHeight}px`; // Ajustar el margen superior
+                
+                conocenosTitle.style.marginTop = `${headerHeight}px`; 
             }
         });
     });
 
-    // Función para scroll suave con efecto de amortiguación
+    
     function smoothScrollTo(to, duration) {
-        isAnimating = true; // Marcar que hay una animación en curso
+        isAnimating = true; 
         const start = window.pageYOffset;
         const change = to - start;
         const increment = 20;
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentTime < duration) {
                 setTimeout(animateScroll, increment);
             } else {
-                isAnimating = false; // Marcar que la animación ha terminado
+                isAnimating = false; 
             }
         }
 

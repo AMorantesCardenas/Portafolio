@@ -1,9 +1,9 @@
-/* Estilos para el contenido dentro del main */
+
 
 
 .main-content {
-    text-align: center; /* Centra el texto dentro del contenedor */
-    padding: 0; /* Ajusta el espaciado entre las secciones */
+    text-align: center; 
+    padding: 0; 
     margin: 0;
     
 }
@@ -11,64 +11,64 @@
 
 
 .main-content h2 {
-    margin-bottom: 20px; /* Espaciado adicional debajo de cada título */
+    margin-bottom: 20px; 
 }
 
 
 
 
 #redes {
-    width: 70%; /* Ancho del 70% */
-    margin: 0 auto; /* Centrado horizontal */
-    padding: 20px 0; /* Ajusta el relleno según sea necesario */
-    box-sizing: border-box; /* Incluye el relleno en el cálculo del tamaño */
-    display: flex; /* Cambia el comportamiento del contenedor a flexbox */
-    justify-content: center; /* Centra horizontalmente los elementos */
-    align-items: center; /* Centra verticalmente los elementos */
+    width: 70%; 
+    margin: 0 auto; 
+    padding: 20px 0; 
+    box-sizing: border-box; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
 }
 
 .social-link {
-    margin: 0 10px; /* Espaciado entre enlaces */
+    margin: 0 10px;
 }
 
 
 .social-link:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último elemento */
+    margin-right: 0; 
 }
 
 .social-link img {
-    width: 20px; /* Ajusta el tamaño según sea necesario */
+    width: 20px; 
     height: auto;
 }
 
-/* Estilos para enlaces en modo día */
+
 #redes a {
     text-decoration: none;
-    color: black; /* Color de texto predeterminado en modo día */
-    font-size: 16px; /* Tamaño de fuente */
-    margin: 0 10px; /* Espaciado entre enlaces */
+    color: black; 
+    font-size: 16px; 
+    margin: 0 10px; 
     display: flex;
     align-items: center;
     padding-right: 100px;
 }
 
-/* Estilos para enlaces en modo noche */
+
 
 
 
 .dark-mode #redes a {
-    color: white; /* Color de texto en modo noche */
+    color: white; 
 }
 
 #redes a:hover {
-    text-decoration: underline; /* Subrayar enlaces al pasar el mouse */
+    text-decoration: underline; 
     cursor: pointer;
 }
 
 #redes svg {
-    width: 20px; /* Tamaño del SVG */
+    width: 20px;
     height: auto;
-    margin-right: 5px; /* Espaciado entre el SVG y el texto */
+    margin-right: 5px; 
 }
 
 .floating-bubble {
