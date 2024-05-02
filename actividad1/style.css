@@ -4,18 +4,19 @@ body {
     font-size: 16px;
     line-height: 1.5;
     display: flex;
+    flex-direction: column; 
+    align-items: center; 
     justify-content: center;
-    align-items: center;
     height: 100vh;
-    margin: 0;    
+    margin: 0;
 }
-
 
 section {
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 20px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 h3 {
@@ -43,7 +44,7 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: #ff004c;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -52,7 +53,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #ff004c;
 }
 
 .button-container {
@@ -62,7 +63,7 @@ input[type="submit"]:hover {
 }
 
 .btn-submit {
-    background-color: #007bff;
+    background-color: #ff004c;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -71,10 +72,65 @@ input[type="submit"]:hover {
 }
 
 .btn-submit:hover {
-    background-color: #0056b3;
+    background-color: #d40a47;
 }
 
 .btn-submit:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+#activities-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-end; 
+    
+}
+
+.activity {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
+    max-width: 250px; 
+    word-wrap: break-word;
+}
+
+.activity img {
+    max-width: 150px; 
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+
+
+.delete-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.delete-btn img {
+    width: 24px;
+    height: 24px;
+    fill: red;
+}
+
+
+#response-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+::placeholder {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: inherit;
 }
